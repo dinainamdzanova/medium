@@ -1,0 +1,48 @@
+{/* MODAL */}
+                            <Modal
+                                open={open}
+                                onClose={() => { setOpen(false) }}
+                                aria-labelledby="parent-modal-title"
+                                aria-describedby="parent-modal-description"
+                            >
+                                <Flex items="center" position="absolute" direction="column" backColor="white" padding="70px 70px" top="50%" left="50%" transform="translate(-50%, -50%)">
+                                <TextField id="standard-basic" label="Name" variant="standard" />
+                                <Space pbottom="20px" />
+                                <TextField id="standard-basic" label="Surname" variant="standard" />
+                                <Space pbottom="20px" />
+                                <TextField id="standard-basic" label="Email" variant="standard" />
+                                <Space pbottom="20px" />
+                                <TextField id="standard-basic" label="Password" type="password" variant="standard" />
+                                <Space pbottom="35px" />
+                                <Button variant="contained">Sign up</Button>
+                                </Flex>
+
+                            </Modal>
+                            {/* /MODAL  */}
+
+
+                            {/* SIGN IN MODAL  */}
+                            <Modal
+                                open={signinOpen}
+                                onClose={() => { setSigninOpen(false) }}
+                                aria-labelledby="parent-modal-title"
+                                aria-describedby="parent-modal-description"
+                            >
+                                <Flex items="center" position="absolute" direction="column" backColor="white" padding="100px 50px" top="50%" left="50%" transform="translate(-50%, -50%)">
+                                <TextField id="standard-basic" label="Email" variant="standard" />
+                                <Space pbottom="20px" />
+                                <TextField id="standard-basic" label="Password" type="password" variant="standard" />
+                                <Space pbottom="35px" />
+                                <Button variant="contained">Sign in</Button>
+                                </Flex>
+
+                            </Modal>
+                            {/* /SIGN IN MODAL  */}
+
+
+
+<Flex items="center" direction="row">
+    <ButtonPublic text="Sign up" padding="10px 25px" color="#fff" bg="#000" border="1px solid black" bradius="90em" onClick={handleOpen} />
+    <Space right="15px" />
+    <ButtonPublic text="Sign in" padding="10px 25px" color="#fff" bg="#000" border="1px solid black" bradius="90em" onClick={handleSigninOpen} />
+</Flex>                            
